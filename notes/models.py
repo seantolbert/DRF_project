@@ -32,7 +32,7 @@ class Note(models.Model):
     status = models.CharField(
         max_length=10, choices=options, default='published')
     objects = models.Manager()  # default manager
-    noteObjects = NoteObjects()  # custom manager
+    noteobjects = NoteObjects()  # custom manager
 
     def __str__(self):
         return self.title

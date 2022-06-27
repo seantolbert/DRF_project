@@ -20,5 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('notes.urls', namespace='notes')),
-    path('api', include('notes_api.urls', namespace='notes_api')),
+    path('api/', include('notes_api.urls', namespace='notes_api')),
 ]
