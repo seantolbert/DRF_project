@@ -31,6 +31,11 @@ class Note(models.Model):
         User, on_delete=models.CASCADE, related_name="note_posts")
     status = models.CharField(
         max_length=10, choices=options, default='published')
+    objects = models.Manager()  # default manager
+    noteObjects = NoteObjects()  # custom manager
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ('-published',)
