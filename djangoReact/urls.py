@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('notes.urls', namespace='notes')),
     path('api/', include('notes_api.urls', namespace='notes_api')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
